@@ -4,6 +4,7 @@ import {
   EditLayoutItem,
   EditLayoutItemOptions,
   PageLayoutItem,
+  PageToolbarItem,
 } from '@ballware/meta-interface';
 import { RouteProps } from 'react-router-dom';
 
@@ -14,7 +15,7 @@ export interface ApplicationProps {
 
 export interface ApplicationBarProps {
   title?: string;
-  drawerWidth?: string | number;
+  drawerWidth: string | number;
   onMenuToggle?: () => void;
   children?: JSX.Element | JSX.Element[];
 }
@@ -54,6 +55,7 @@ export interface RenderFactoryContextState {
     type: string;
     options: EditLayoutItemOptions;
   }) => JSX.Element;
+  PageToolbarItem?: (props: { toolbarItem: PageToolbarItem }) => JSX.Element;
 }
 
 export const RenderFactoryContext = createContext<RenderFactoryContextState>(

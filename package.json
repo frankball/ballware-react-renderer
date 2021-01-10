@@ -1,5 +1,5 @@
 {
-  "version": "6.0.0-alpha1",
+  "version": "6.0.0-alpha2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "analyze": "size-limit --why"
   },
   "dependencies": {
-    "@ballware/meta-interface": ">=6.0.0-alpha11"
+    "@ballware/meta-interface": "^6.0.0-beta2"
   },
   "peerDependencies": {
     "react": ">=16",
@@ -47,7 +47,7 @@
   },
   "bugs": {
     "url": "https://github.com/frankball/ballware-react-renderer/issues"
-  },  
+  },
   "size-limit": [
     {
       "path": "dist/ballware-react-renderer.cjs.production.min.js",
