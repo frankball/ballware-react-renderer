@@ -42,6 +42,11 @@ export interface RenderFactoryContextState {
   Routes?: (props: {}) => JSX.Element;
   Notification?: (props: {}) => JSX.Element;
   Page?: (props: {}) => JSX.Element;
+  PageToolbar?: (props: {
+    documentationIdentifier?: string;
+    title?: string;
+    items?: PageToolbarItem[];
+  }) => JSX.Element;
   PageLayoutItem?: (props: {
     layoutItem: PageLayoutItem;
     colCount?: number;
