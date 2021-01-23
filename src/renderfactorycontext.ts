@@ -61,6 +61,8 @@ export interface RenderFactoryContextState {
     options: EditLayoutItemOptions;
   }) => JSX.Element;
   PageToolbarItem?: (props: { toolbarItem: PageToolbarItem }) => JSX.Element;
+  EditPopup?: (props: { title: string }) => JSX.Element;
+  IframePopup?: (props: { title: string; url: string; }) => JSX.Element;
 }
 
 export const RenderFactoryContext = createContext<RenderFactoryContextState>(
