@@ -1,10 +1,13 @@
 import { createContext } from 'react';
 
 import {
+  CrudItem,
   EditLayoutItem,
   EditLayoutItemOptions,
+  GridLayoutColumn,
   PageLayoutItem,
   PageToolbarItem,
+  ValueType,
 } from '@ballware/meta-interface';
 import { RouteProps } from 'react-router-dom';
 
@@ -31,6 +34,33 @@ export interface PrivateRouteProps extends RouteProps {
 
 export interface ContextProps {
   children?: JSX.Element | JSX.Element[];
+}
+
+export interface EditPopupProps {
+  title: string;
+}
+
+export interface IframePopupProps {
+  title: string;
+  url: string;
+}
+
+export interface DeletePopupProps {
+  title: string;
+  message: string;
+  id: string;
+}
+
+export interface ForeignEditPopupProps {  
+  functionIdentifier: string;
+  selection: Array<CrudItem>;
+  editingFinished: (reload: boolean) => void;
+}
+
+export interface DetailEditPopupProps {  
+  readonly: boolean;
+  column: GridLayoutColumn;
+  applyChanges: (e: { value: CrudItem | ValueType }) => void;
 }
 
 export interface RenderFactoryContextState {
@@ -61,8 +91,11 @@ export interface RenderFactoryContextState {
     options: EditLayoutItemOptions;
   }) => JSX.Element;
   PageToolbarItem?: (props: { toolbarItem: PageToolbarItem }) => JSX.Element;
-  EditPopup?: (props: { title: string }) => JSX.Element;
-  IframePopup?: (props: { title: string; url: string; }) => JSX.Element;
+  EditPopup?: (props: EditPopupProps) => JSX.Element;
+  IframePopup?: (props: IframePopupProps) => JSX.Element;
+  DeletePopup?: (props: DeletePopupProps) => JSX.Element;
+  ForeignEditPopup?: (props: ForeignEditPopupProps) => JSX.Element;
+  DetailEditPopup?: (props: DetailEditPopupProps) => JSX.Element;
 }
 
 export const RenderFactoryContext = createContext<RenderFactoryContextState>(
