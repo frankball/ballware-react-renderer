@@ -22,15 +22,14 @@ export interface EditItemsContextState {
     detailGridCellPreparing?: (dataMember: string, detailItem: Record<string, unknown>, options: unknown) => void;
     detailGridRowValidating?: (dataMember: string, detailItem: Record<string, unknown>) => string;
 
-    getDetailValue?: <T>(dataMember: string, rowKey: number, detailField?: string) => T;
+    detailEditorPreparing?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string, options: unknown) => void;
+    detailEditorInitialized?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string, editor: EditorRef) => void;
+    detailEditorValidating?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string, identifier: string, value: ValueType) => boolean;
+    detailEditorValueChanged?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string, value: ValueType, notify: boolean) => void;
+    detailEditorEntered?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string) => void;
+    detailEditorEvent?: (dataMember: string, detailItem: Record<string, unknown>, detailMember: string, event: string) => void;
 
-    detailGridEditorPreparing?: (dataMember: string, rowKey: number, detailField: string, detailItem: Record<string, unknown>, options: unknown) => void;
-    detailGridEditorInitialized?: (dataMember: string, rowKey: number, detailField: string, editor: EditorRef) => void;
-    detailGridEditorValidating?: (dataMember: string, rowKey: number, detailField: string, identifier: string, value: ValueType) => boolean;
-    detailGridEditorValueChanged?: (dataMember: string, rowKey: number, detailField: string, value: ValueType, notify: boolean) => void;
-    detailGridEditorEntered?: (dataMember: string, rowKey: number, detailField: string) => void;
-    detailGridEditorEvent?: (dataMember: string, rowKey: number, detailField: string, event: string) => void;
-    
+    getDetailValue?: <T>(dataMember: string, detailItem: Record<string, unknown>, detailMember?: string) => T;
     initNewDetailItem?: (dataMember: string, detailItem: Record<string, unknown>) => void;
     EditProvider?: (props: { editLayout: EditLayout | undefined, item: CrudItem | Array<CrudItem> | ValueType, functionIdentifier?: string | undefined, children: JSX.Element | Array<JSX.Element> }) => JSX.Element;
 }
@@ -87,14 +86,6 @@ export const EditItemsProvider = forwardRef<EditItemsProviderRef, EditItemsConte
         }
     }, [editors]);
 
-    const getDetailItemRow = useCallback((detailMember: string, rowKey: number) => {
-        if (item) {
-            return ((item as Record<string, unknown>)[detailMember] as Array<Record<string, unknown>>)[rowKey]
-        }
-
-        return undefined;
-    }, [item]);
-
     useEffect(() => {
         if (EditLayoutItem) {
             setValue(previousValue => {
@@ -146,23 +137,22 @@ export const EditItemsProvider = forwardRef<EditItemsProviderRef, EditItemsConte
                     detailGridRowValidating: (dataMember, detailItem) => detailGridRowValidating(mode, item as Record<string, unknown>, detailItem, dataMember), 
                     initNewDetailItem: (dataMember, detailItem) => initNewDetailItem(dataMember, item as Record<string, unknown>, detailItem),
 
-                    detailGridEditorPreparing: (dataMember, _rowKey, detailField, detailItem) => editorPreparing(mode, detailItem, undefined, `${dataMember}.${detailField}`),
-                    detailGridEditorInitialized: (dataMember, rowKey, detailField, editor) => {
-                        editors[`${dataMember}.${detailField}`] = editor;
-                        editorInitialized(mode, getDetailItemRow(dataMember, rowKey) ?? {}, editUtilForDetail(dataMember), `${dataMember}.${detailField}`);
+                    detailEditorPreparing: (dataMember, detailItem, detailMember) => editorPreparing(mode, detailItem, undefined, `${dataMember}.${detailMember}`),
+                    detailEditorInitialized: (dataMember, detailItem, detailMember, editor) => {
+                        editors[`${dataMember}.${detailMember}`] = editor;
+                        editorInitialized(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailMember}`);
                     },
-                    detailGridEditorValueChanged: (dataMember, rowKey, detailField, value, notify) => {
-                        const detailItem = getDetailItemRow(dataMember, rowKey) ?? {};
+                    detailEditorValueChanged: (dataMember, detailItem, detailMember, value, notify) => {
 
-                        setByPath(detailItem, detailField, value);
+                        setByPath(detailItem, detailMember, value);
 
                         if (notify) {
-                            editorValueChanged(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailField}`, value);
+                            editorValueChanged(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailMember}`, value);
                         }
                     },
-                    detailGridEditorValidating: (dataMember, rowKey, detailField, identifier, value) => editorValidating(mode, getDetailItemRow(dataMember, rowKey) ?? {}, editUtilForDetail(dataMember), `${dataMember}.${detailField}`, value, identifier),
-                    detailGridEditorEntered: (dataMember, rowKey, detailField) => editorEntered(mode, getDetailItemRow(dataMember, rowKey) ?? {}, editUtilForDetail(dataMember), `${dataMember}.${detailField}`),
-                    detailGridEditorEvent: (dataMember, rowKey, detailField, event) => editorEvent(mode, getDetailItemRow(dataMember, rowKey) ?? {}, editUtilForDetail(dataMember), `${dataMember}.${detailField}`, event),
+                    detailEditorValidating: (dataMember, detailItem, detailMember, identifier, value) => editorValidating(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailMember}`, value, identifier),
+                    detailEditorEntered: (dataMember, detailItem, detailMember) => editorEntered(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailMember}`),
+                    detailEditorEvent: (dataMember, detailItem, detailMember, event) => editorEvent(mode, detailItem, editUtilForDetail(dataMember), `${dataMember}.${detailMember}`, event),
 
                     EditProvider: (props) => <EditProvider mode={mode} {...props}/>
                 } as EditItemsContextState;
