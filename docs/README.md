@@ -1,3 +1,5 @@
+@ballware/react-renderer / [Exports](modules.md)
+
 Provides an rendering implementation independend rendering factory context.
 
 ## ballware application builder

@@ -1,20 +1,39 @@
-import React, { useContext } from 'react';
-import { CrudContainerOptions, PageLayoutItem } from '@ballware/meta-interface';
+/**
+ * @license
+ * Copyright 2021 Frank Ballmeyer
+ * This code is released under the MIT license.
+ * SPDX-License-Identifier: MIT
+ */
+
+import React, { PropsWithChildren, useContext } from 'react';
+import { CrudContainerOptions, PageLayoutItem, QueryParams } from '@ballware/meta-interface';
 import { PageContext, ProviderFactoryContext } from '@ballware/react-contexts';
 import { CrudFunctions} from './crudfunctions'; 
 import { RenderFactoryContext } from '../renderfactorycontext';
 
-export interface LayoutCrudContainerProps {
+/**
+ * Properties for crudcontainer component
+ */
+export interface CrudContainerProps {
+    /**
+     * Layout item metadata for crudcontainer item
+     */
     layoutItem: PageLayoutItem;  
-    params?: Record<string, unknown>;  
-    children?: JSX.Element | JSX.Element[];
-  }
+
+    /**
+     * Head params provided by parent container
+     */
+    params?: QueryParams;  
+}
   
-  export const LayoutCrudContainer = ({ layoutItem, params, children }: LayoutCrudContainerProps) => {
+/**
+ * Provides a set of providers needed for crud operations for a specific entity
+ */
+export const CrudContainer = ({ layoutItem, params, children }: PropsWithChildren<CrudContainerProps>) => {
     const { LookupProvider, MetaProvider, CrudProvider } = useContext(ProviderFactoryContext);
     const { customParam } = useContext(PageContext);
     const { PageLayoutItem } = useContext(RenderFactoryContext);
-  
+
     if (customParam && PageLayoutItem && LookupProvider && MetaProvider && CrudProvider) {
         return (<LookupProvider>
         <MetaProvider entity={(layoutItem.options?.itemoptions as CrudContainerOptions)?.entity} readOnly={false} headParams={params ?? {}} initialCustomParam={customParam ?? {}}>
@@ -27,6 +46,6 @@ export interface LayoutCrudContainerProps {
         </MetaProvider>
         </LookupProvider>);
     } else {
-        return <React.Fragment></React.Fragment>;
+        return <React.Fragment>Waiting...</React.Fragment>;
     }
-  }
+}

@@ -1,41 +1,60 @@
-export const getByPath = (item: { [identifier: string]: any }, dataMember: string): any => {
+/**
+ * @license
+ * Copyright 2021 Frank Ballmeyer
+ * This code is released under the MIT license.
+ * SPDX-License-Identifier: MIT
+ */
+
+ /**
+  * Find property value in a dot separated path of object tree
+  * @param item Root item of object tree
+  * @param dataMember Dot separated path of data property in tree
+  * @returns Value of property if found in tree
+  */
+export const getByPath = (item: Record<string, unknown>, dataMember: string): unknown => {
   const path = dataMember?.split('.');
 
   if (path) {
-    let pathSubitem: any = item;
+    let pathSubitem: unknown = item;
 
     for (let idx = 0; idx < path.length; idx++) {
       const pathElement = path[idx];
 
       if (pathSubitem) {
-        pathSubitem = pathSubitem[pathElement];
+        pathSubitem = (pathSubitem as Record<string, unknown>)[pathElement];
       }
     }
 
     return pathSubitem;
   }
 
-  return null;
+  return undefined;
 }
 
-export const setByPath = (item: { [identifier: string]: any }, dataMember: string, value: any): void => {
+ /**
+  * Set property value in a dot separated path of object tree
+  * @param item Root item of object tree
+  * @param dataMember Dot separated path of data property in tree
+  * @param value New value of property
+  */
+export const setByPath = (item: Record<string, unknown>, dataMember: string, value: unknown): void => {
   const path = dataMember?.split('.');
 
   if (path) {
-    let pathSubitem: { [identifier: string]: any } = item;
+    let pathSubitem: unknown = item;
 
     for (let idx = 0; idx < path.length - 1; idx++) {
       const pathElement = path[idx];
 
       if (pathSubitem) {
-        if (!pathSubitem[pathElement]) {
-          pathSubitem[pathElement] = {};
+        if (!(pathSubitem as Record<string, unknown>)[pathElement]) {
+          (pathSubitem as Record<string, unknown>)[pathElement] = {};
         }
 
-        pathSubitem = pathSubitem[pathElement];
+        pathSubitem = (pathSubitem as Record<string, unknown>)[pathElement];
       }
     }
 
-    pathSubitem[path[path.length - 1]] = value;
+    (pathSubitem as Record<string, unknown>)[path[path.length - 1]] = value;
   }
 }

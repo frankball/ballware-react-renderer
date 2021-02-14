@@ -1,25 +1,71 @@
-import React, { useState, createContext, useEffect, useContext, useMemo } from 'react';
+/**
+ * @license
+ * Copyright 2021 Frank Ballmeyer
+ * This code is released under the MIT license.
+ * SPDX-License-Identifier: MIT
+ */
+
+import React, { useState, createContext, useEffect, useContext, useMemo, PropsWithChildren } from 'react';
 
 import { EditUtil, ValueType } from '@ballware/meta-interface';
 import { ToolbarItemRef } from './toolbar';
 import { LookupDescriptor, LookupCreator, LookupContext, PageContext } from '@ballware/react-contexts';
 
+/**
+ * Context providing environmental functionality for toolbar items
+ */
 export interface ToolbarItemsContextState {
+    /**
+     * Get lookup descriptor by lookup identifier
+     * @param identifier Identifier for lookup
+     * @returns Lookup descriptor or lookup creator function
+     */
     getLookup?: (identifier: string) => LookupDescriptor | LookupCreator;
 
+    /**
+     * All parameter editors initialized
+     * @param hidden True if parameter editor display is hidden because of media limitations
+     */
     paramsInitialized?: (hidden: boolean) => void;
-    paramEditorInitialized?: (name: string, toolbarItem: ToolbarItemRef) => void;
-    paramEditorValueChanged?: (name: string, value: ValueType) => void;
-    paramEditorEvent?: (name: string, event: string, param?: ValueType) => void;
+
+    /**
+     * Parameter editor for identifier is inizialized (and displayed)
+     * @param identifier Identifier of parameter editor
+     * @param toolbarItem Reference to toolbar item component
+     */
+    paramEditorInitialized?: (identifier: string, toolbarItem: ToolbarItemRef) => void;
+
+    /**
+     * Parameter editor value changed
+     * @param identifier Identifier of parameter editor
+     * @param value Current value of parameter editor
+     */
+    paramEditorValueChanged?: (identifier: string, value: ValueType) => void;
+
+    /**
+     * Parameter editor event triggered
+     * @param identifier Identifier of parameter editor
+     * @param event Specific identifier of event
+     * @param param Optional event specific parameter
+     */
+    paramEditorEvent?: (identifier: string, event: string, param?: ValueType) => void;
 }
 
-export interface ToolbarItemsContextProps {
-    children: JSX.Element | JSX.Element[] | undefined
-}
-
+/**
+ * 
+ */
 export const ToolbarItemsContext = createContext<ToolbarItemsContextState>({});
 
-export const ToolbarItemsProvider = ({ children }: ToolbarItemsContextProps) => {
+/**
+ * Properties for toolbar items provider
+ */
+export interface ToolbarItemsProviderProps {    
+}
+
+/**
+ * Provides environmental functionality for toolbar items
+ */
+export const ToolbarItemsProvider = ({ children }: PropsWithChildren<ToolbarItemsProviderProps>) => {
 
     const [value, setValue] = useState<ToolbarItemsContextState>({});
 

@@ -1,5 +1,5 @@
 {
-  "version": "6.0.0-beta3",
+  "version": "6.0.0-rc1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -17,15 +17,17 @@
     "lint": "tsdx lint --fix",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "docs": "typedoc --plugin typedoc-plugin-markdown"
   },
   "dependencies": {
-    "@ballware/meta-interface": "^6.0.0-beta2",
-    "@ballware/react-contexts": "^6.0.0-beta6"
+    "@ballware/meta-interface": "^6.0.1",
+    "@ballware/react-contexts": "^6.0.5"
   },
   "peerDependencies": {
     "react": ">=16",
-    "react-router-dom": ">=5.2.0"
+    "react-router-dom": ">=5.2.0",
+    "react-i18next": ">=11.8.6"
   },
   "husky": {
     "hooks": {
@@ -67,10 +69,13 @@
     "husky": "^4.3.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.6",
+    "react-router-dom": "^5.2.0",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3",
-    "react-router-dom": "^5.2.0"
+    "typedoc": "^0.20.19",
+    "typedoc-plugin-markdown": "^3.4.5",
+    "typescript": "^4.1.3"
   }
 }

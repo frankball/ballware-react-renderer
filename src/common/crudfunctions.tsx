@@ -1,29 +1,29 @@
-import React, { useEffect, useContext, useCallback } from 'react';
+/**
+ * @license
+ * Copyright 2021 Frank Ballmeyer
+ * This code is released under the MIT license.
+ * SPDX-License-Identifier: MIT
+ */
+
+import React, { useEffect, useContext, useCallback, PropsWithChildren } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CrudItem } from '@ballware/meta-interface';
 import { ProviderFactoryContext, LookupContext, CrudContext, MetaContext, EditModes } from '@ballware/react-contexts';
 import { RenderFactoryContext } from '../renderfactorycontext';
 
-export interface ItemFunction {
-  id: string;
-  text: string;
-  icon: string;
-  multi: boolean;
-  visible: (item: CrudItem) => boolean;
-  execute: (item: CrudItem, target: Element) => void;
-  executeMulti: (items: Array<CrudItem>, target: Element) => void;
-}
-
+/**
+ * Properties for crud functions component
+ */
 export interface CrudFunctionsProps {
-  match?: {
-    isExact: boolean; params: { action?: string; id?: string };
-  };
-  children: JSX.Element | Array<JSX.Element>;
 }
 
-export const CrudFunctions = (props: CrudFunctionsProps) => {
+/**
+ * Component providing crud editing functionality with popups
+ */
+export const CrudFunctions = ({ children }: PropsWithChildren<CrudFunctionsProps>) => {
 
-  const { children } = props;
+  const { t } = useTranslation();
 
   const { lookups, lookupsComplete } = useContext(LookupContext);
 
@@ -49,9 +49,9 @@ export const CrudFunctions = (props: CrudFunctionsProps) => {
   }, [getEditLayout]);
 
   return (<React.Fragment>
-    {(EditProvider && EditPopup && adding && item && editLayout) && <EditProvider mode={EditModes.CREATE} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={`${displayName} anlegen`} /></EditProvider>}
-    {(EditProvider && EditPopup && viewing && item && editLayout) && <EditProvider mode={EditModes.VIEW} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={`${displayName} anzeigen`} /></EditProvider>}
-    {(EditProvider && EditPopup && editing && item && editLayout) && <EditProvider mode={EditModes.EDIT} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={`${displayName} bearbeiten`} /></EditProvider>}
+    {(t && EditProvider && EditPopup && adding && item && editLayout) && <EditProvider mode={EditModes.CREATE} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={t('datacontainer.titles.add', { entity: displayName })} /></EditProvider>}
+    {(t && EditProvider && EditPopup && viewing && item && editLayout) && <EditProvider mode={EditModes.VIEW} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={t('datacontainer.titles.view', { entity: displayName })} /></EditProvider>}
+    {(t && EditProvider && EditPopup && editing && item && editLayout) && <EditProvider mode={EditModes.EDIT} editLayout={getEditLayoutForIdentifier(editLayout)} item={item}><EditPopup title={t('datacontainer.titles.edit', { entity: displayName })} /></EditProvider>}
     {(EditProvider && EditPopup && customEditing && !customEditFunction?.externalEditor && !customEditFunction?.entity && customEditFunction?.editLayout && getEditLayout) 
       && <EditProvider mode={EditModes.EDIT} editLayout={getEditLayoutForIdentifier(customEditFunction?.editLayout)} item={customEditParam as Record<string, unknown>} functionIdentifier={customEditFunction?.id}><EditPopup title={`${customEditFunction?.text}`} /></EditProvider>}
     {(IframePopup && customEditing && customEditFunction?.externalEditor) && <IframePopup title={`${customEditFunction?.text}`} url={customEditParam as string} />}
@@ -69,7 +69,7 @@ export const CrudFunctions = (props: CrudFunctionsProps) => {
           </CrudProvider>
         </MetaProvider>
       </LookupProvider>}
-    {(DeletePopup && deleteing && item) && <DeletePopup title={displayName + " entfernen"} message={displayName + " wirklich entfernen?"} id={item.Id} />}
+    {(t && DeletePopup && deleteing && item) && <DeletePopup title={t('datacontainer.titles.remove', { entity: displayName })} message={t('datacontainer.messages.remove', { entity: displayName })} id={item.Id} />}
     {(displayName && getEditLayout && lookups && documents && lookupsComplete) && children}
   </React.Fragment>);
 }
