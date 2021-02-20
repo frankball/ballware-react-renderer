@@ -22,4 +22,4 @@ Properties of edit popup
 
 Title text for popup
 
-Defined in: [src/renderfactorycontext.ts:80](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/renderfactorycontext.ts#L80)
+Defined in: [src/renderfactorycontext.ts:80](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L80)

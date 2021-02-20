@@ -22,4 +22,4 @@ Properties for navigation menu
 
 Navigation menu display/hide toggled
 
-Defined in: [src/renderfactorycontext.ts:59](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/renderfactorycontext.ts#L59)
+Defined in: [src/renderfactorycontext.ts:59](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L59)

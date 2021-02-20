@@ -22,4 +22,4 @@ Properties for page toolbar item component
 
 Toolbar item metadata
 
-Defined in: [src/renderfactorycontext.ts:166](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/renderfactorycontext.ts#L166)
+Defined in: [src/renderfactorycontext.ts:166](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L166)

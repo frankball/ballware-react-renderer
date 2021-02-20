@@ -23,7 +23,7 @@ Properties for crudcontainer component
 
 Layout item metadata for crudcontainer item
 
-Defined in: [src/common/crudcontainer.tsx:21](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/crudcontainer.tsx#L21)
+Defined in: [src/common/crudcontainer.tsx:21](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/crudcontainer.tsx#L21)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 Head params provided by parent container
 
-Defined in: [src/common/crudcontainer.tsx:26](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/crudcontainer.tsx#L26)
+Defined in: [src/common/crudcontainer.tsx:26](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/crudcontainer.tsx#L26)

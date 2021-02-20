@@ -29,7 +29,7 @@ export const CrudFunctions = ({ children }: PropsWithChildren<CrudFunctionsProps
 
   const { EditPopup, DeletePopup, IframePopup, ForeignEditPopup } = useContext(RenderFactoryContext);
 
-  const { LookupProvider, MetaProvider, CrudProvider, EditProvider } = useContext(ProviderFactoryContext);
+  const { LookupProvider, MetaProvider, AttachmentProvider, CrudProvider, EditProvider } = useContext(ProviderFactoryContext);
   const { displayName, getEditLayout, documents } = useContext(MetaContext);
   const { load, fetchParams, close, adding, viewing, editing, deleteing, customEditing, customEditFunction, customEditParam, editLayout, item } = useContext(CrudContext);
 
@@ -55,18 +55,20 @@ export const CrudFunctions = ({ children }: PropsWithChildren<CrudFunctionsProps
     {(EditProvider && EditPopup && customEditing && !customEditFunction?.externalEditor && !customEditFunction?.entity && customEditFunction?.editLayout && getEditLayout) 
       && <EditProvider mode={EditModes.EDIT} editLayout={getEditLayoutForIdentifier(customEditFunction?.editLayout)} item={customEditParam as Record<string, unknown>} functionIdentifier={customEditFunction?.id}><EditPopup title={`${customEditFunction?.text}`} /></EditProvider>}
     {(IframePopup && customEditing && customEditFunction?.externalEditor) && <IframePopup title={`${customEditFunction?.text}`} url={customEditParam as string} />}
-    {(ForeignEditPopup && LookupProvider && MetaProvider && CrudProvider && customEditing && !customEditFunction?.externalEditor && customEditFunction?.entity && close && load) &&
+    {(ForeignEditPopup && LookupProvider && MetaProvider && AttachmentProvider && CrudProvider && customEditing && !customEditFunction?.externalEditor && customEditFunction?.entity && close && load) &&
       <LookupProvider>
         <MetaProvider entity={customEditFunction.entity} readOnly={false} headParams={{}} initialCustomParam={{}}>
-          <CrudProvider query={undefined} initialFetchParams={{}}>
-            <ForeignEditPopup functionIdentifier={customEditFunction.id} selection={customEditParam as CrudItem[]} editingFinished={(reload) => {
-              close();
+          <AttachmentProvider>
+            <CrudProvider query={undefined} initialFetchParams={{}}>
+              <ForeignEditPopup functionIdentifier={customEditFunction.id} selection={customEditParam as CrudItem[]} editingFinished={(reload) => {
+                close();
 
-              if (reload) {
-                load(fetchParams);
-              }
-            }} /> 
-          </CrudProvider>
+                if (reload) {
+                  load(fetchParams);
+                }
+              }} /> 
+            </CrudProvider>
+          </AttachmentProvider>
         </MetaProvider>
       </LookupProvider>}
     {(t && DeletePopup && deleteing && item) && <DeletePopup title={t('datacontainer.titles.remove', { entity: displayName })} message={t('datacontainer.messages.remove', { entity: displayName })} id={item.Id} />}

@@ -30,19 +30,21 @@ export interface CrudContainerProps {
  * Provides a set of providers needed for crud operations for a specific entity
  */
 export const CrudContainer = ({ layoutItem, params, children }: PropsWithChildren<CrudContainerProps>) => {
-    const { LookupProvider, MetaProvider, CrudProvider } = useContext(ProviderFactoryContext);
+    const { LookupProvider, MetaProvider, AttachmentProvider, CrudProvider } = useContext(ProviderFactoryContext);
     const { customParam } = useContext(PageContext);
     const { PageLayoutItem } = useContext(RenderFactoryContext);
 
-    if (customParam && PageLayoutItem && LookupProvider && MetaProvider && CrudProvider) {
+    if (customParam && PageLayoutItem && LookupProvider && MetaProvider && AttachmentProvider && CrudProvider) {
         return (<LookupProvider>
         <MetaProvider entity={(layoutItem.options?.itemoptions as CrudContainerOptions)?.entity} readOnly={false} headParams={params ?? {}} initialCustomParam={customParam ?? {}}>
-            <CrudProvider query={(layoutItem.options?.itemoptions as CrudContainerOptions)?.query ?? 'primary'} initialFetchParams={params}>
-            <CrudFunctions>
-                <React.Fragment>{layoutItem.items?.map((item, index) => <PageLayoutItem key={index} colCount={item.colCount} layoutItem={item} params={params}/>)}</React.Fragment>
-                <React.Fragment>{children}</React.Fragment>
-            </CrudFunctions>
-            </CrudProvider>
+            <AttachmentProvider>
+                <CrudProvider query={(layoutItem.options?.itemoptions as CrudContainerOptions)?.query ?? 'primary'} initialFetchParams={params}>
+                    <CrudFunctions>
+                        <React.Fragment>{layoutItem.items?.map((item, index) => <PageLayoutItem key={index} colCount={item.colCount} layoutItem={item} params={params}/>)}</React.Fragment>
+                        <React.Fragment>{children}</React.Fragment>
+                    </CrudFunctions>
+                </CrudProvider>
+            </AttachmentProvider>
         </MetaProvider>
         </LookupProvider>);
     } else {

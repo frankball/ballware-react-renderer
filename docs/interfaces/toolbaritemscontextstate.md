@@ -30,7 +30,7 @@ Get lookup descriptor by lookup identifier
 
 **`returns`** Lookup descriptor or lookup creator function
 
-Defined in: [src/common/toolbaritemscontext.tsx:23](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/toolbaritemscontext.tsx#L23)
+Defined in: [src/common/toolbaritemscontext.tsx:23](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L23)
 
 ___
 
@@ -46,7 +46,7 @@ Parameter editor event triggered
 
 **`param`** Optional event specific parameter
 
-Defined in: [src/common/toolbaritemscontext.tsx:51](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/toolbaritemscontext.tsx#L51)
+Defined in: [src/common/toolbaritemscontext.tsx:51](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L51)
 
 ___
 
@@ -60,7 +60,7 @@ Parameter editor for identifier is inizialized (and displayed)
 
 **`param`** Reference to toolbar item component
 
-Defined in: [src/common/toolbaritemscontext.tsx:36](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/toolbaritemscontext.tsx#L36)
+Defined in: [src/common/toolbaritemscontext.tsx:36](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L36)
 
 ___
 
@@ -74,7 +74,7 @@ Parameter editor value changed
 
 **`param`** Current value of parameter editor
 
-Defined in: [src/common/toolbaritemscontext.tsx:43](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/toolbaritemscontext.tsx#L43)
+Defined in: [src/common/toolbaritemscontext.tsx:43](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L43)
 
 ___
 
@@ -86,4 +86,4 @@ All parameter editors initialized
 
 **`param`** True if parameter editor display is hidden because of media limitations
 
-Defined in: [src/common/toolbaritemscontext.tsx:29](https://github.com/frankball/ballware-react-renderer/blob/0e29664/src/common/toolbaritemscontext.tsx#L29)
+Defined in: [src/common/toolbaritemscontext.tsx:29](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L29)
