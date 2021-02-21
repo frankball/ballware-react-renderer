@@ -23,7 +23,7 @@ Properties for editor component
 
 Options for editor
 
-Defined in: [src/renderfactorycontext.ts:216](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L216)
+Defined in: [src/renderfactorycontext.ts:216](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L216)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 Type identifier for editor
 
-Defined in: [src/renderfactorycontext.ts:211](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L211)
+Defined in: [src/renderfactorycontext.ts:211](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L211)

@@ -24,7 +24,7 @@ Properties for application bar component
 
 Width of navigation drawer
 
-Defined in: [src/renderfactorycontext.ts:44](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L44)
+Defined in: [src/renderfactorycontext.ts:44](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L44)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Burger menu button toggled
 
-Defined in: [src/renderfactorycontext.ts:49](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L49)
+Defined in: [src/renderfactorycontext.ts:49](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L49)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 Title text for application bar
 
-Defined in: [src/renderfactorycontext.ts:39](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L39)
+Defined in: [src/renderfactorycontext.ts:39](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L39)

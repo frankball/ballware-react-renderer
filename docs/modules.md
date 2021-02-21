@@ -53,7 +53,7 @@
 
 • `Const` **EditItemsContext**: *Context*<[*EditItemsContextState*](interfaces/edititemscontextstate.md)\>
 
-Defined in: [src/common/edititemscontext.tsx:185](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/edititemscontext.tsx#L185)
+Defined in: [src/common/edititemscontext.tsx:185](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L185)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 Provides environmental functionality for edit layout items
 
-Defined in: [src/common/edititemscontext.tsx:207](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/edititemscontext.tsx#L207)
+Defined in: [src/common/edititemscontext.tsx:207](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L207)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • `Const` **RenderFactoryContext**: *Context*<[*RenderFactoryContextState*](interfaces/renderfactorycontextstate.md)\>
 
-Defined in: [src/renderfactorycontext.ts:334](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L334)
+Defined in: [src/renderfactorycontext.ts:334](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L334)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 • `Const` **ToolbarItemsContext**: *Context*<[*ToolbarItemsContextState*](interfaces/toolbaritemscontextstate.md)\>
 
-Defined in: [src/common/toolbaritemscontext.tsx:57](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L57)
+Defined in: [src/common/toolbaritemscontext.tsx:57](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/toolbaritemscontext.tsx#L57)
 
 ## Functions
 
@@ -95,7 +95,7 @@ Provides a set of providers needed for crud operations for a specific entity
 
 **Returns:** *Element*
 
-Defined in: [src/common/crudcontainer.tsx:32](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/crudcontainer.tsx#L32)
+Defined in: [src/common/crudcontainer.tsx:32](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/crudcontainer.tsx#L32)
 
 ___
 
@@ -111,7 +111,7 @@ Component providing crud editing functionality with popups
 
 **Returns:** *Element*
 
-Defined in: [src/common/crudfunctions.tsx:24](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/crudfunctions.tsx#L24)
+Defined in: [src/common/crudfunctions.tsx:24](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/crudfunctions.tsx#L24)
 
 ___
 
@@ -127,7 +127,7 @@ Provides environmental functionality for toolbar items
 
 **Returns:** *Element*
 
-Defined in: [src/common/toolbaritemscontext.tsx:68](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/toolbaritemscontext.tsx#L68)
+Defined in: [src/common/toolbaritemscontext.tsx:68](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/toolbaritemscontext.tsx#L68)
 
 ___
 
@@ -148,7 +148,7 @@ Name | Type | Description |
 
 Value of property if found in tree
 
-Defined in: [src/common/databinding.ts:14](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/databinding.ts#L14)
+Defined in: [src/common/databinding.ts:14](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/databinding.ts#L14)
 
 ___
 
@@ -168,7 +168,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/common/databinding.ts:40](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/databinding.ts#L40)
+Defined in: [src/common/databinding.ts:40](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/databinding.ts#L40)
 
 ___
 
@@ -187,4 +187,4 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/common/customhooks.ts:15](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/common/customhooks.ts#L15)
+Defined in: [src/common/customhooks.ts:15](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/customhooks.ts#L15)

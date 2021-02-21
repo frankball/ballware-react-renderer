@@ -1,5 +1,5 @@
 {
-  "version": "6.0.0",
+  "version": "6.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@ballware/meta-interface": "^6.0.2",
-    "@ballware/react-contexts": "^6.0.7"
+    "@ballware/react-contexts": "^6.0.8"
   },
   "peerDependencies": {
     "react": ">=16",

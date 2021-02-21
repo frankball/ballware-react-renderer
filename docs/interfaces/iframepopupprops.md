@@ -23,7 +23,7 @@ Properties for iframe popup
 
 Title text for iframe popup
 
-Defined in: [src/renderfactorycontext.ts:90](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L90)
+Defined in: [src/renderfactorycontext.ts:90](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L90)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 Url for iframe
 
-Defined in: [src/renderfactorycontext.ts:95](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L95)
+Defined in: [src/renderfactorycontext.ts:95](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L95)

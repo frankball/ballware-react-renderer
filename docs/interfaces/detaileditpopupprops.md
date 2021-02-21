@@ -24,7 +24,7 @@ Properties for grid detail edit popup
 
 Apply changes callback after editing finished
 
-Defined in: [src/renderfactorycontext.ts:236](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L236)
+Defined in: [src/renderfactorycontext.ts:236](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L236)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Edited column in grid
 
-Defined in: [src/renderfactorycontext.ts:231](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L231)
+Defined in: [src/renderfactorycontext.ts:231](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L231)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 Detail edit content is readonly (view mode)
 
-Defined in: [src/renderfactorycontext.ts:226](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L226)
+Defined in: [src/renderfactorycontext.ts:226](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L226)

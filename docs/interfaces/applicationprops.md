@@ -22,4 +22,4 @@ Properties for application component
 
 Width of navigation drawer
 
-Defined in: [src/renderfactorycontext.ts:29](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L29)
+Defined in: [src/renderfactorycontext.ts:29](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L29)

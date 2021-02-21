@@ -24,7 +24,7 @@ Properties for delete popup
 
 Identifier of item to be dropped
 
-Defined in: [src/renderfactorycontext.ts:115](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L115)
+Defined in: [src/renderfactorycontext.ts:115](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L115)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Content message in popup
 
-Defined in: [src/renderfactorycontext.ts:110](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L110)
+Defined in: [src/renderfactorycontext.ts:110](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L110)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 Title text for delete popup
 
-Defined in: [src/renderfactorycontext.ts:105](https://github.com/frankball/ballware-react-renderer/blob/69adedb/src/renderfactorycontext.ts#L105)
+Defined in: [src/renderfactorycontext.ts:105](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L105)
