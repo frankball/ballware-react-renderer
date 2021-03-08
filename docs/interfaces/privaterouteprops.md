@@ -34,7 +34,7 @@ Check if route is allowed to be accessed by authenticated user
 
 **`returns`** true if access is allowed
 
-Defined in: [src/renderfactorycontext.ts:70](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L70)
+Defined in: [src/renderfactorycontext.ts:70](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L70)
 
 ___
 

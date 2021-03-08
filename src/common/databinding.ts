@@ -5,13 +5,16 @@
  * SPDX-License-Identifier: MIT
  */
 
- /**
-  * Find property value in a dot separated path of object tree
-  * @param item Root item of object tree
-  * @param dataMember Dot separated path of data property in tree
-  * @returns Value of property if found in tree
-  */
-export const getByPath = (item: Record<string, unknown>, dataMember: string): unknown => {
+/**
+ * Find property value in a dot separated path of object tree
+ * @param item Root item of object tree
+ * @param dataMember Dot separated path of data property in tree
+ * @returns Value of property if found in tree
+ */
+export const getByPath = (
+  item: Record<string, unknown>,
+  dataMember: string
+): unknown => {
   const path = dataMember?.split('.');
 
   if (path) {
@@ -29,15 +32,19 @@ export const getByPath = (item: Record<string, unknown>, dataMember: string): un
   }
 
   return undefined;
-}
+};
 
- /**
-  * Set property value in a dot separated path of object tree
-  * @param item Root item of object tree
-  * @param dataMember Dot separated path of data property in tree
-  * @param value New value of property
-  */
-export const setByPath = (item: Record<string, unknown>, dataMember: string, value: unknown): void => {
+/**
+ * Set property value in a dot separated path of object tree
+ * @param item Root item of object tree
+ * @param dataMember Dot separated path of data property in tree
+ * @param value New value of property
+ */
+export const setByPath = (
+  item: Record<string, unknown>,
+  dataMember: string,
+  value: unknown
+): void => {
   const path = dataMember?.split('.');
 
   if (path) {
@@ -57,4 +64,4 @@ export const setByPath = (item: Record<string, unknown>, dataMember: string, val
 
     (pathSubitem as Record<string, unknown>)[path[path.length - 1]] = value;
   }
-}
+};

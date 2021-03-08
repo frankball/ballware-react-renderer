@@ -25,7 +25,7 @@ Get option value of toolbar item component
 
 **`param`** Identifier of option
 
-Defined in: [src/common/toolbar.ts:23](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/toolbar.ts#L23)
+Defined in: [src/common/toolbar.ts:23](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/toolbar.ts#L23)
 
 ___
 
@@ -39,4 +39,4 @@ Set option value of toolbar item component
 
 **`param`** New value of option
 
-Defined in: [src/common/toolbar.ts:17](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/toolbar.ts#L17)
+Defined in: [src/common/toolbar.ts:17](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/toolbar.ts#L17)

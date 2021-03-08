@@ -26,7 +26,7 @@ Editing finished callback
 
 **`param`** Reload items in parent component
 
-Defined in: [src/renderfactorycontext.ts:136](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L136)
+Defined in: [src/renderfactorycontext.ts:136](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L136)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 Edit function identifier
 
-Defined in: [src/renderfactorycontext.ts:125](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L125)
+Defined in: [src/renderfactorycontext.ts:125](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L125)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 Selected items for foreign edit
 
-Defined in: [src/renderfactorycontext.ts:130](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L130)
+Defined in: [src/renderfactorycontext.ts:130](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L130)

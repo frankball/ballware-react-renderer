@@ -118,7 +118,7 @@ export interface DeletePopupProps {
 /**
  * Properties for foreign edit popup
  */
-export interface ForeignEditPopupProps {  
+export interface ForeignEditPopupProps {
   /**
    * Edit function identifier
    */
@@ -159,11 +159,11 @@ export interface PageToolbarProps {
 /**
  * Properties for page toolbar item component
  */
-export interface PageToolbarItemProps { 
+export interface PageToolbarItemProps {
   /**
    * Toolbar item metadata
    */
-  item: PageToolbarItem 
+  item: PageToolbarItem;
 }
 
 /**
@@ -219,7 +219,7 @@ export interface EditorProps {
 /**
  * Properties for grid detail edit popup
  */
-export interface DetailEditPopupProps {  
+export interface DetailEditPopupProps {
   /**
    * Detail edit content is readonly (view mode)
    */
@@ -253,7 +253,9 @@ export interface RenderFactoryContextState {
   /**
    * Provide main application bar component
    */
-  ApplicationBar?: (props: PropsWithChildren<ApplicationBarProps>) => JSX.Element;
+  ApplicationBar?: (
+    props: PropsWithChildren<ApplicationBarProps>
+  ) => JSX.Element;
 
   /**
    * Provide navigation tree component
@@ -331,4 +333,6 @@ export interface RenderFactoryContextState {
   DetailEditPopup?: (props: DetailEditPopupProps) => JSX.Element;
 }
 
-export const RenderFactoryContext = createContext<RenderFactoryContextState>({});
+export const RenderFactoryContext = createContext<RenderFactoryContextState>(
+  {}
+);

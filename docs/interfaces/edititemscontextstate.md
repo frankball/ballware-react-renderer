@@ -42,7 +42,7 @@ Context providing environmental functionality for rendered edit layout
 
 Factory for generating new edit provider
 
-Defined in: [src/common/edititemscontext.tsx:182](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L182)
+Defined in: [src/common/edititemscontext.tsx:263](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L263)
 
 ___
 
@@ -58,7 +58,7 @@ Detail editor entered focus
 
 **`param`** Data member of detail editor
 
-Defined in: [src/common/edititemscontext.tsx:152](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L152)
+Defined in: [src/common/edititemscontext.tsx:217](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L217)
 
 ___
 
@@ -76,7 +76,7 @@ Detail editor event triggered
 
 **`param`** Editor event identifier
 
-Defined in: [src/common/edititemscontext.tsx:161](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L161)
+Defined in: [src/common/edititemscontext.tsx:230](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L230)
 
 ___
 
@@ -94,7 +94,7 @@ Manipulate detail editor component after creation
 
 **`param`** Reference to editor component
 
-Defined in: [src/common/edititemscontext.tsx:123](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L123)
+Defined in: [src/common/edititemscontext.tsx:171](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L171)
 
 ___
 
@@ -112,7 +112,7 @@ Manipulate detail editor options before rendering
 
 **`param`** Detail editor options
 
-Defined in: [src/common/edititemscontext.tsx:114](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L114)
+Defined in: [src/common/edititemscontext.tsx:157](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L157)
 
 ___
 
@@ -134,7 +134,7 @@ Execute custom validation rule for detail editor
 
 **`returns`** true if value passes validation
 
-Defined in: [src/common/edititemscontext.tsx:134](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L134)
+Defined in: [src/common/edititemscontext.tsx:187](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L187)
 
 ___
 
@@ -154,7 +154,7 @@ Value changed in detail editor
 
 **`param`** True if value change is triggered by user, false if value change was triggered by custom script
 
-Defined in: [src/common/edititemscontext.tsx:144](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L144)
+Defined in: [src/common/edititemscontext.tsx:203](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L203)
 
 ___
 
@@ -170,7 +170,7 @@ Manipulate detail grid cell options before rendering
 
 **`param`** Grid column options
 
-Defined in: [src/common/edititemscontext.tsx:97](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L97)
+Defined in: [src/common/edititemscontext.tsx:133](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L133)
 
 ___
 
@@ -186,7 +186,7 @@ Validate detail row before save operation
 
 **`returns`** Validation message or translation id if validation fails, undefined if row passes validation
 
-Defined in: [src/common/edititemscontext.tsx:105](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L105)
+Defined in: [src/common/edititemscontext.tsx:145](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L145)
 
 ___
 
@@ -198,7 +198,7 @@ Editor entered focus
 
 **`param`** Data member of editor
 
-Defined in: [src/common/edititemscontext.tsx:82](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L82)
+Defined in: [src/common/edititemscontext.tsx:118](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L118)
 
 ___
 
@@ -212,7 +212,7 @@ Editor triggered specific event
 
 **`param`** Event identifier
 
-Defined in: [src/common/edititemscontext.tsx:89](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L89)
+Defined in: [src/common/edititemscontext.tsx:125](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L125)
 
 ___
 
@@ -226,7 +226,7 @@ Initialize editor component after first rendering
 
 **`param`** Editor component reference
 
-Defined in: [src/common/edititemscontext.tsx:59](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L59)
+Defined in: [src/common/edititemscontext.tsx:87](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L87)
 
 ___
 
@@ -240,7 +240,7 @@ Manipulate editor options before rendering
 
 **`param`** Editor options
 
-Defined in: [src/common/edititemscontext.tsx:52](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L52)
+Defined in: [src/common/edititemscontext.tsx:80](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L80)
 
 ___
 
@@ -258,7 +258,7 @@ Validate custom validation rule for editor
 
 **`returns`** true if value passed validation
 
-Defined in: [src/common/edititemscontext.tsx:68](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L68)
+Defined in: [src/common/edititemscontext.tsx:96](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L96)
 
 ___
 
@@ -274,7 +274,7 @@ Editor value has changed event
 
 **`param`** True if value change was triggered by user, false if value change was triggered by application
 
-Defined in: [src/common/edititemscontext.tsx:76](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L76)
+Defined in: [src/common/edititemscontext.tsx:108](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L108)
 
 ___
 
@@ -292,7 +292,7 @@ Get value in detail row
 
 **`returns`** Detail member value
 
-Defined in: [src/common/edititemscontext.tsx:170](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L170)
+Defined in: [src/common/edititemscontext.tsx:244](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L244)
 
 ___
 
@@ -304,7 +304,7 @@ Get lookup descriptor by identifier
 
 **`returns`** Lookup descriptor or lookup creator method
 
-Defined in: [src/common/edititemscontext.tsx:39](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L39)
+Defined in: [src/common/edititemscontext.tsx:67](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L67)
 
 ___
 
@@ -318,7 +318,7 @@ Get typed value from edited item by data member
 
 **`returns`** Property value as requested type
 
-Defined in: [src/common/edititemscontext.tsx:33](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L33)
+Defined in: [src/common/edititemscontext.tsx:61](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L61)
 
 ___
 
@@ -332,7 +332,7 @@ Initialize new created detail item
 
 **`param`** New created detail item
 
-Defined in: [src/common/edititemscontext.tsx:177](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L177)
+Defined in: [src/common/edititemscontext.tsx:255](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L255)
 
 ___
 
@@ -344,7 +344,7 @@ Check if edit form is read only
 
 **`returns`** true if edit form is read only
 
-Defined in: [src/common/edititemscontext.tsx:45](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L45)
+Defined in: [src/common/edititemscontext.tsx:73](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L73)
 
 ___
 
@@ -358,4 +358,4 @@ Render list of layout items
 
 **`returns`** Collection of rendered items
 
-Defined in: [src/common/edititemscontext.tsx:26](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/edititemscontext.tsx#L26)
+Defined in: [src/common/edititemscontext.tsx:52](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/edititemscontext.tsx#L52)

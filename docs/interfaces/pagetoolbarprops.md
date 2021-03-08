@@ -24,7 +24,7 @@ Properties for page toolbar component
 
 Identifier for showing documentation
 
-Defined in: [src/renderfactorycontext.ts:146](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L146)
+Defined in: [src/renderfactorycontext.ts:146](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L146)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 Toolbar items metadata
 
-Defined in: [src/renderfactorycontext.ts:156](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L156)
+Defined in: [src/renderfactorycontext.ts:156](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L156)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 Title of page
 
-Defined in: [src/renderfactorycontext.ts:151](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L151)
+Defined in: [src/renderfactorycontext.ts:151](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L151)

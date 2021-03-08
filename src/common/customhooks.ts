@@ -32,4 +32,4 @@ export const useInterval = (callback: any, delay: number) => {
 
     return undefined;
   }, [delay]);
-}
+};

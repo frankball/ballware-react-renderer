@@ -39,7 +39,7 @@ Context providing rendered items from render plugin
 
 Provide application window component
 
-Defined in: [src/renderfactorycontext.ts:251](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L251)
+Defined in: [src/renderfactorycontext.ts:251](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L251)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 Provide main application bar component
 
-Defined in: [src/renderfactorycontext.ts:256](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L256)
+Defined in: [src/renderfactorycontext.ts:256](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L256)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 Provide context component with shared functionality for render plugin
 
-Defined in: [src/renderfactorycontext.ts:246](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L246)
+Defined in: [src/renderfactorycontext.ts:246](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L246)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 Provide delete popup
 
-Defined in: [src/renderfactorycontext.ts:321](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L321)
+Defined in: [src/renderfactorycontext.ts:323](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L323)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 Provide detail edit popup
 
-Defined in: [src/renderfactorycontext.ts:331](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L331)
+Defined in: [src/renderfactorycontext.ts:333](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L333)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 Provide edit layout item
 
-Defined in: [src/renderfactorycontext.ts:296](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L296)
+Defined in: [src/renderfactorycontext.ts:298](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L298)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 Provide edit popup
 
-Defined in: [src/renderfactorycontext.ts:311](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L311)
+Defined in: [src/renderfactorycontext.ts:313](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L313)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 Provide editor component
 
-Defined in: [src/renderfactorycontext.ts:301](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L301)
+Defined in: [src/renderfactorycontext.ts:303](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L303)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 Provide foreign edit popup
 
-Defined in: [src/renderfactorycontext.ts:326](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L326)
+Defined in: [src/renderfactorycontext.ts:328](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L328)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 Provide iframe popup
 
-Defined in: [src/renderfactorycontext.ts:316](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L316)
+Defined in: [src/renderfactorycontext.ts:318](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L318)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 Provide navigation tree component
 
-Defined in: [src/renderfactorycontext.ts:261](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L261)
+Defined in: [src/renderfactorycontext.ts:263](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L263)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 Provide notification component for display user notifications
 
-Defined in: [src/renderfactorycontext.ts:276](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L276)
+Defined in: [src/renderfactorycontext.ts:278](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L278)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 Provide page component for displaying metadata page
 
-Defined in: [src/renderfactorycontext.ts:281](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L281)
+Defined in: [src/renderfactorycontext.ts:283](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L283)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 Provide page layout item
 
-Defined in: [src/renderfactorycontext.ts:291](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L291)
+Defined in: [src/renderfactorycontext.ts:293](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L293)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 Provide page toolbar component
 
-Defined in: [src/renderfactorycontext.ts:286](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L286)
+Defined in: [src/renderfactorycontext.ts:288](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L288)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 Provide page toolbar item component
 
-Defined in: [src/renderfactorycontext.ts:306](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L306)
+Defined in: [src/renderfactorycontext.ts:308](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L308)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 Provide route component for restricted access
 
-Defined in: [src/renderfactorycontext.ts:266](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L266)
+Defined in: [src/renderfactorycontext.ts:268](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L268)
 
 ___
 
@@ -209,4 +209,4 @@ ___
 
 Provide routes for router
 
-Defined in: [src/renderfactorycontext.ts:271](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/renderfactorycontext.ts#L271)
+Defined in: [src/renderfactorycontext.ts:273](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/renderfactorycontext.ts#L273)

@@ -28,7 +28,7 @@ Get option value from editor component
 
 **`returns`** Current value of option
 
-Defined in: [src/common/editor.ts:24](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/editor.ts#L24)
+Defined in: [src/common/editor.ts:24](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/editor.ts#L24)
 
 ___
 
@@ -42,7 +42,7 @@ Set option value in editor component
 
 **`param`** New value of option
 
-Defined in: [src/common/editor.ts:17](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/editor.ts#L17)
+Defined in: [src/common/editor.ts:17](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/editor.ts#L17)
 
 ___
 
@@ -54,4 +54,4 @@ Trigger validation of editor
 
 **`returns`** true if validation of current value passes
 
-Defined in: [src/common/editor.ts:30](https://github.com/frankball/ballware-react-renderer/blob/762165e/src/common/editor.ts#L30)
+Defined in: [src/common/editor.ts:30](https://github.com/frankball/ballware-react-renderer/blob/625dfe5/src/common/editor.ts#L30)
